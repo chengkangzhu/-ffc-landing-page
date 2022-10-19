@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+  <title>Product Landing Page</title>
+  <link rel='stylesheet' href="css/styles.css">
+  <meta charset='utf-8'>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://kit.fontawesome.com/c761e5bd78.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <header id='header'>
+    <nav id="nav-bar">
+      <img id="header-img" src="https://cdn.freecodecamp.org/testable-projects-fcc/images/product-landing-page-logo.png">
+      <i class="menu fa-solid fa-bars"></i>
+      <ul id="nav-links">
+        <li><a class='nav-link' href="#feature-pointer">Features</a></li>
+        <li><a class='nav-link' href="#video-pointer">How it Works</a></li>
+        <li><a class='nav-link' href="#price-pointer">Pricing</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <h1 id="title">Handcrafted, home-made masterpieces</h1>
+    <form id="form" action='https://www.freecodecamp.com/email-submit' method='get'>
+      <input id="email" name="email" type='email' required placeholder="Enter your email adress">
+      <input id="submit" type="submit" value="GET STARTED" />
+    </form>
+    <ul id="features">
+      <div id="feature-pointer" class="pointer"></div>
+      <li class="feature-container">
+        <div><i class="icon fa-solid fa-fire"></i></div>
+        <div class="p-block">
+          <h2 class="feature-h2">Premium Materials</h2>
+          <p class="feature-p">Our trombones use the shiniest brass which is sourced locally. This will increase the
+            longevity of your purchase.</p>
+        </div>
+      </li>
+      <li class="feature-container">
+        <div><i class="icon fa-solid fa-truck"></i></div>
+        <div class="p-block">
+          <h2 class="feature-h2">Fast Shipping</h2>
+          <p class="feature-p">We make sure you recieve your trombone as soon as we have finished making it. We also
+            provide free returns if you are not satisfied.</p>
+        </div>
+      </li>
+      <li class="feature-container">
+        <div><i class="icon fa-solid fa-battery-full"></i></div>
+        <div class="p-block">
+          <h2 class="feature-h2">Quality Assurance</h2>
+          <p class="feature-p">For every purchase you make, we will ensure there are no damages or faults and we will
+            check and test the pitch of your instrument.</p>
+        </div>
+      </li>
+    </ul>
+    <div style="max-width:700px; margin:auto;">
+    <div id="video-pointer" class="pointer" ></div>
+    <div class="video-wrapper">
+      <iframe id="video"  src="https://www.youtube.com/embed/y8Yv4pnO7qc"
+        title="YouTube video player" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen></iframe>
+    </div>
+    </div>
+    <div id="price-boxes">
+      <div id="price-pointer" class="pointer"></div>
+      <div class="price-box">
+        <h3 class="types">TENOR TROMBONE</h3>
+        <p class="price">$600</p>
+        <ul class="texts">
+          <li class="text">Lorem ipsum.</li>
+          <li class="text">Lorem ipsum.</li>
+          <li class="text">Lorem ipsum dolor.</li>
+          <li class="text">Lorem ipsum.</li>
+        </ul>
+        <button class="select-btn">SELECT</button>
+      </div>
+      <div class="price-box">
+        <h3 class="types">BASS TROMBONE</h3>
+        <p class="price">$900</p>
+        <ul class="texts">
+          <li class="text">Lorem ipsum.</li>
+          <li class="text">Lorem ipsum.</li>
+          <li class="text">Lorem ipsum dolor.</li>
+          <li class="text">Lorem ipsum.</li>
+        </ul>
+        <button class="select-btn">SELECT</button>
+      </div>
+      <div class="price-box">
+        <h3 class="types">VALVE TROMBONE</h3>
+        <p class="price">$1200</p>
+        <ul class="texts">
+          <li class="text">Plays similar to a Trumpet</li>
+          <li class="text">Great for Jazz Bands</li>
+          <li class="text">Lorem ipsum dolor.</li>
+          <li class="text">Lorem ipsum.</li>
+        </ul>
+        <button class="select-btn">SELECT</button>
+      </div>
+    </div>
+  </main>
+  <footer id="footer">
+    <ul class="top-footer">
+      <li class="word">Privacy</li>
+      <li class="word">Terms</li>
+      <li class="word">Contact</li>
+    </ul>
+    <p class="copyright">Copyright 2016, Original Trombones</p>
+  </footer>
+</body>
+<script>
+
+let menu = document.querySelector(".menu");
+let navLinks = document.querySelector("#nav-links")
+let navLinksArr = document.querySelectorAll('#nav-links a')
+ 
+menu.addEventListener("click",displayNav)
+
+
+function displayNav(){
+  if(navLinks.style.top !== "80px"){ 
+    navLinks.style.top = "80px"
+  } else {
+    navLinks.style.top = "-120px"
+  }
+}
+
+for(let i = 0; i < navLinksArr.length; i++){
+  navLinksArr[i].addEventListener("click",displayNav)
+}
+
+</script>
+</html>
